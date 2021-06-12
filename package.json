@@ -1,0 +1,14 @@
+{
+  "name": "express-template",
+  "version": "1.0.0",
+  "repository": "ssh://git@github.com/Taiji-Kondo/express-template.git",
+  "author": "Taiji-Kondo",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
