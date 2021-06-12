@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "node .build/index.js",
+    "dev": "ts-node-dev src/index.ts",
+    "dev:test": "ts-node-dev --respawn src/index.ts",
     "tsc": "tsc"
   },
   "dependencies": {
