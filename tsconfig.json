@@ -20,7 +20,7 @@
     "moduleResolution": "node",
     "removeComments": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": true
   },
   "exclude": ["node_modules"],
   "include": ["src/**/*"]

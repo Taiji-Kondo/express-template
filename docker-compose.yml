@@ -26,6 +26,5 @@ services:
     ports:
       - ${MYSQL_PORT}:3306
 
-
 volumes:
   db-volume:
