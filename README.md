@@ -13,6 +13,9 @@ docker-compose up -d
 Express Build:
 
 ```bash
-# develop
-yarn devdocker-compose up -d
+# develop (with watch)
+yarn dev
+
+# production (output ./.build directory)
+yarn build
 ```
