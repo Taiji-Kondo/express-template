@@ -8,8 +8,8 @@
   "scripts": {
     "build": "NODE_ENV=production run-p clean tsc",
     "clean": "rimraf .build",
-    "dev": "NODE_ENV=development ts-node-dev src/index.ts",
-    "dev:test": "NODE_ENV=development ts-node-dev --respawn src/index.ts",
+    "dev": "NODE_ENV=development ts-node-dev src/app.ts",
+    "dev:test": "NODE_ENV=development ts-node-dev --respawn src/app.ts",
     "format": "prettier --write .",
     "prepare": "husky install",
     "lint": "eslint . --ext .ts,.js",
