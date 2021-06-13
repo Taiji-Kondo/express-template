@@ -1,12 +1,11 @@
-import express from 'express'
+import Express from 'express'
+import router from './routes/index'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const app = express()
+const app = Express()
 const port = process.env.APP_PORT
 
-app.get('/', (req, res) => {
-  res.send(`Hello World! ${req}`)
-})
+app.use('/', router)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
