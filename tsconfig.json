@@ -2,9 +2,6 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./.build",
-    "paths": {
-      "@/*": ["src/*"]
-    },
     "typeRoots": ["src/types"],
     "target": "ES2020",
     "allowJs": true,
