@@ -120,4 +120,7 @@ dist
 # Express
 .build/
 
+# Docker
+docker-compose.override.yml
+
 
