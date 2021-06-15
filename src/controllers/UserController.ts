@@ -1,12 +1,11 @@
-import { Get, JsonController } from 'routing-controllers'
+import { Controller, Get, JsonController } from 'routing-controllers'
 import { Users } from '../models/Users'
 
 @JsonController()
-class UserController {
-  @Get('/users')
+@Controller('/users')
+export class UserController {
+  @Get('/')
   getAll() {
     return Users
   }
 }
-
-export default UserController

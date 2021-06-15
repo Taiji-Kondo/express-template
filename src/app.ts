@@ -1,26 +1,19 @@
 import 'reflect-metadata'
-import Express from 'express'
 import bodyParser from 'body-parser'
-import { useExpressServer } from 'routing-controllers'
+import { createExpressServer } from 'routing-controllers'
 import dotenv from 'dotenv'
-import UserController from './controllers/UserController'
+import { UserController } from './controllers/UserController'
 dotenv.config()
 
 const PORT = process.env.APP_PORT
 
-const bootstrap = async () => {
-  const app = Express()
+const APP = createExpressServer({
+  routePrefix: '/api',
+  controllers: [UserController],
+})
 
-  app.use(bodyParser.json())
+APP.use(bodyParser.json())
 
-  useExpressServer(app, {
-    routePrefix: '/api',
-    controllers: [UserController],
-  })
-
-  app.listen(PORT, () => {
-    console.log(`Express server listening on port ${PORT}`)
-  })
-}
-
-bootstrap()
+APP.listen(PORT, () => {
+  console.log(`Express server listening on port ${PORT}`)
+})
