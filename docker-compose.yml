@@ -9,7 +9,7 @@ services:
     environment:
       NODE_ENV: development
     ports:
-      - ${APP_PORT}:8000
+      - ${APP_PORT}:${APP_PORT}
     depends_on:
       - db
     volumes:
