@@ -11,5 +11,3 @@ export class Users extends BaseEntity {
   @Column()
   public age: number
 }
-
-export default Users
