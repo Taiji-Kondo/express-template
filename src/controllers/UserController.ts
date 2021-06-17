@@ -1,20 +1,23 @@
-import { Get, JsonController } from 'routing-controllers'
+import { Body, Delete, Get, JsonController, Param, Post } from 'routing-controllers'
+import { UserService } from '../services/UserService'
 import { Users } from '../models/Users'
-import { createConnection, getConnectionOptions } from 'typeorm'
+import { UsersParams } from '../types/Users'
 
 @JsonController('/users')
-export class UserController {
+export class UserController extends UserService {
   @Get('/')
-  async getAll() {
-    // TODO
-    // connectionの設定を書いたクラスを継承して使い回す
-    const connectionOptions = await getConnectionOptions('default')
-    const connection = await createConnection(connectionOptions)
-    const user = new Users()
-    user.name = 'test'
-    user.age = 24
-    await connection.getRepository(Users).save(user)
-    const users = await connection.getRepository(Users).find()
-    return users
+  async getAll(): Promise<Users[]> {
+    const response = await this.getUsers()
+    return response
+  }
+
+  @Post('/create')
+  async create(@Body() user: UsersParams): Promise<void> {
+    await this.createUser(user)
+  }
+
+  @Delete('/delete/:id')
+  async delete(@Param('id') id: number): Promise<void> {
+    await this.deleteUser(id)
   }
 }
