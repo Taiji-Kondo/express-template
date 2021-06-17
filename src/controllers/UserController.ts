@@ -1,10 +1,10 @@
 import { Body, Delete, Get, JsonController, Param, Post } from 'routing-controllers'
-import { UserService } from '../services/UserService'
+import { UserRepository } from '../repositories/UserRepository'
 import { Users } from '../models/Users'
 import { UsersParams } from '../types/Users'
 
 @JsonController('/users')
-export class UserController extends UserService {
+export class UserController extends UserRepository {
   @Get('/')
   async getAll(): Promise<Users[]> {
     const response = await this.getUsers()

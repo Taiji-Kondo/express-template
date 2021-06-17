@@ -1,8 +1,8 @@
 import { Users } from '../models/Users'
-import { Service } from './Service'
+import { Repository } from './Repository'
 import { UsersParams } from '../types/Users'
 
-export class UserService extends Service<Users> {
+export class UserRepository extends Repository<Users> {
   constructor() {
     super(new Users())
   }

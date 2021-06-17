@@ -1,7 +1,7 @@
 import { createConnection, getConnectionOptions } from 'typeorm'
 import { Connection } from 'typeorm/connection/Connection'
 
-export class Service<T> {
+export class Repository<T> {
   protected readonly MODEL: T
   protected constructor(model: T, private readonly connectionName = 'default') {
     this.MODEL = model
