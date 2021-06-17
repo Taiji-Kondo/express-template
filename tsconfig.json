@@ -2,7 +2,6 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./.build",
-    "typeRoots": ["src/types"],
     "target": "ES2020",
     "allowJs": true,
     "emitDecoratorMetadata": true,
