@@ -7,4 +7,4 @@ COPY package*.json $APP_ROOT
 COPY yarn.lock $APP_ROOT
 RUN yarn install
 
-COPY .. $APP_ROOT
+COPY ../.. $APP_ROOT
