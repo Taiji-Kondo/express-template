@@ -5,8 +5,8 @@ default-character-set = utf8mb4
 character-set-server = utf8mb4
 collation-server=utf8mb4_unicode_ci
 
-[client]
-default-character-set = utf8mb4
-
 # TIMESTAMPの明示的なデフォルト値
 explicit_defaults_for_timestamp = ON
+
+[client]
+default-character-set = utf8mb4
