@@ -1,7 +1,7 @@
 import { Body, Delete, Get, JsonController, Param, Post } from 'routing-controllers'
 import { UserRepository } from '../../repositories/user/UserRepository'
 import { Users } from '../../models/user/Users'
-import { UsersParams } from '../../types/user/Users'
+import { UserType } from '../../types/user/Users'
 
 @JsonController('/users')
 export class UserController {
@@ -14,7 +14,7 @@ export class UserController {
   }
 
   @Post('/create')
-  async create(@Body() user: UsersParams): Promise<void> {
+  async create(@Body() user: UserType): Promise<void> {
     await this.userRepository.createUser(user)
   }
 

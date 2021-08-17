@@ -1,6 +1,6 @@
 import { Users } from '../../models/user/Users'
 import { Repository } from '../Repository'
-import { UsersParams } from '../../types/user/Users'
+import { UserType } from '../../types/user/Users'
 
 export class UserRepository extends Repository<Users> {
   constructor() {
@@ -14,7 +14,7 @@ export class UserRepository extends Repository<Users> {
     return users
   }
 
-  async createUser(_user: UsersParams): Promise<void> {
+  async createUser(_user: UserType): Promise<void> {
     const connection = await this.createConnection()
     const user = _user
     await connection.getRepository(Users).save(user)
