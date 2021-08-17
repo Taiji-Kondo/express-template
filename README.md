@@ -28,6 +28,9 @@ yarn migration:generate
 
 # Migration Run
 yarn migration:run
+
+# Migration drop
+yarn migration:drop
 ```
 
 Lint and Format:
