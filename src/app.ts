@@ -2,7 +2,7 @@ import 'reflect-metadata'
 import bodyParser from 'body-parser'
 import { createExpressServer } from 'routing-controllers'
 import dotenv from 'dotenv'
-import { UserController } from './controllers/UserController'
+import { UserController } from './controllers/user/UserController'
 dotenv.config()
 
 const PORT = process.env.APP_PORT

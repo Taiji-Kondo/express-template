@@ -1,7 +1,7 @@
 import { Body, Delete, Get, JsonController, Param, Post } from 'routing-controllers'
-import { UserRepository } from '../repositories/UserRepository'
-import { Users } from '../models/Users'
-import { UsersParams } from '../types/Users'
+import { UserRepository } from '../../repositories/user/UserRepository'
+import { Users } from '../../models/user/Users'
+import { UsersParams } from '../../types/user/Users'
 
 @JsonController('/users')
 export class UserController {

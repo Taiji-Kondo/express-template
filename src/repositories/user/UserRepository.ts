@@ -1,6 +1,6 @@
-import { Users } from '../models/Users'
-import { Repository } from './Repository'
-import { UsersParams } from '../types/Users'
+import { Users } from '../../models/user/Users'
+import { Repository } from '../Repository'
+import { UsersParams } from '../../types/user/Users'
 
 export class UserRepository extends Repository<Users> {
   constructor() {
