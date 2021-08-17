@@ -23,8 +23,7 @@ export class UserRepository extends Repository<Users> {
   async createUser(_user: UserType): Promise<ResponseType<string>> {
     const connection = await this.createConnection()
     try {
-      const user = _user
-      await connection.getRepository(Users).save(user)
+      await connection.getRepository(Users).save(_user)
       return { data: 'success' }
     } catch (err) {
       return { data: err }
